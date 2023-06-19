@@ -54,7 +54,7 @@ Make sure that your current working directory is the project root.
 
 ```
 flutter pub get
-flutter pub run flutter_rename_app_plus
+flutter pub run flutter_rename_app_plus3
 ```
 
 ### Credits 👍
