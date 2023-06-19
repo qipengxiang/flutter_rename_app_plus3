@@ -1,0 +1,32 @@
+name: bank_app
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_rename_app_plus3:
+    path: ../
+
+flutter_rename_app_plus:
+  application_name: Bank App
+  dart_package_name: bank_app
+  application_id: com.bank.android
+  bundle_id: com.bank.ios
+  android_package_name: com.bank.android
+  ios_bundle_name: Bank
+
+flutter:
+
+  uses-material-design: true
+
