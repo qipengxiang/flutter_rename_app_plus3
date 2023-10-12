@@ -7,7 +7,7 @@ import 'package:yaml/yaml.dart';
 import 'utils.dart';
 
 /// The section id for flutter_rename_app in the yaml file
-const String yamlSectionId = 'flutter_rename_app_plus';
+const String yamlSectionId = 'flutter_rename_app_plus3';
 
 /// A class of arguments which the user can specify in pubspec.yaml
 class YamlArguments {

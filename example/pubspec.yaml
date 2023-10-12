@@ -18,7 +18,7 @@ dev_dependencies:
   flutter_rename_app_plus3:
     path: ../
 
-flutter_rename_app_plus:
+flutter_rename_app_plus3:
   application_name: Bank App
   dart_package_name: bank_app
   application_id: com.bank.android

@@ -28,3 +28,7 @@
 * support dart 3.x
 * null safety
 * fix bugs
+
+## [1.2.3] - 10/12/2023
+
+* fix bugs
