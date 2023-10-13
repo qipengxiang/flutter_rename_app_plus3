@@ -178,7 +178,8 @@ Future<String?> _loadiOSBundleName() async {
   }
 }
 
-Future<String?> searchInFile({required String filePath, required String pattern}) async {
+Future<String?> searchInFile(
+    {required String filePath, required String pattern}) async {
   final File file = File(filePath);
   final String fileContent = file.readAsStringSync();
   final RegExp regExp = RegExp(pattern);

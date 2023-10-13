@@ -21,37 +21,44 @@ renameApp() async {
     bool requireChanges = false;
 
     if (config.oldAndroidAppName != config.newAndroidAppName) {
-      Logger.info("Need to change the Android application name from : ${config.oldAndroidAppName} to ${config.newAndroidAppName}");
+      Logger.info(
+          "Need to change the Android application name from : ${config.oldAndroidAppName} to ${config.newAndroidAppName}");
       requireChanges = true;
     }
 
     if (config.oldiOSAppName != config.newiOSAppName) {
-      Logger.info("Need to change the iOS application name from : ${config.oldiOSAppName} to ${config.newiOSAppName}");
+      Logger.info(
+          "Need to change the iOS application name from : ${config.oldiOSAppName} to ${config.newiOSAppName}");
       requireChanges = true;
     }
 
     if (config.oldApplicationId != config.newApplicationId) {
-      Logger.info("Need to change the application id from : ${config.oldApplicationId} to ${config.newApplicationId}");
+      Logger.info(
+          "Need to change the application id from : ${config.oldApplicationId} to ${config.newApplicationId}");
       requireChanges = true;
     }
 
     if (config.oldBundleId != config.newBundleId) {
-      Logger.info("Need to change the bundle id from : ${config.oldBundleId} to ${config.newBundleId}");
+      Logger.info(
+          "Need to change the bundle id from : ${config.oldBundleId} to ${config.newBundleId}");
       requireChanges = true;
     }
 
     if (config.oldiOSBundleName != config.newiOSBundleName) {
-      Logger.info("Need to change the iOS bundle name from : ${config.oldiOSBundleName} to ${config.newiOSBundleName}");
+      Logger.info(
+          "Need to change the iOS bundle name from : ${config.oldiOSBundleName} to ${config.newiOSBundleName}");
       requireChanges = true;
     }
 
     if (config.oldDartPackageName != config.newDartPackageName) {
-      Logger.info("Need to change the dart package from : ${config.oldDartPackageName} to ${config.newDartPackageName}");
+      Logger.info(
+          "Need to change the dart package from : ${config.oldDartPackageName} to ${config.newDartPackageName}");
       requireChanges = true;
     }
 
     if (config.oldAndroidPackageName != config.newAndroidPackageName) {
-      Logger.info("Need to change the android package name from : ${config.oldAndroidPackageName} to ${config.newAndroidPackageName}");
+      Logger.info(
+          "Need to change the android package name from : ${config.oldAndroidPackageName} to ${config.newAndroidPackageName}");
       requireChanges = true;
     }
 
@@ -131,8 +138,10 @@ _applyContentChanges(List<RequiredChange> requiredChanges) async {
       for (final path in change.paths) {
         if (change.isDirectory) {
           final Directory directory = Directory(path);
-          await Future.forEach(directory.listSync(recursive: true), (FileSystemEntity entity) async {
-            await _changeContentInFile(entity.path, change.regexp, change.replacement);
+          await Future.forEach(directory.listSync(recursive: true),
+              (FileSystemEntity entity) async {
+            await _changeContentInFile(
+                entity.path, change.regexp, change.replacement);
           });
         } else {
           await _changeContentInFile(path, change.regexp, change.replacement);
